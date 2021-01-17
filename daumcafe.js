@@ -18,7 +18,7 @@ chrome.runtime.onMessage.addListener(function(msg) {
 });
 
 function keywordMatch(str, keywordList) {
-    for (let keyword of keywordList) {
+    for (var keyword of keywordList) {
         if (str.match(keyword)) {
             return true;
         }
@@ -27,7 +27,7 @@ function keywordMatch(str, keywordList) {
 }
 
 function userMatch(str, userList) {
-    for (let user of userList) {
+    for (var user of userList) {
         if (str === user) {
             return true;
         }
@@ -40,7 +40,7 @@ function blurItems(items, authors, keywordList, userList) {
         console.log("error!! array length not same");
         return;
     }
-    for (let i = 0; i < items.length; i++) {
+    for (var i = 0; i < items.length; i++) {
         const item = items[i];
         const author = authors[i];
 
@@ -58,7 +58,7 @@ function blurItems(items, authors, keywordList, userList) {
 }
 
 function blurContent(keywordList, userList) {
-    let myDocument;
+    var myDocument;
     if (!document.querySelector('iframe#down')) {
         myDocument = document;
     } else {
@@ -66,7 +66,7 @@ function blurContent(keywordList, userList) {
     }
 
     // set css style
-    let hiddenKeywordCss = myDocument.getElementById('hidden-keyword-css');
+    var hiddenKeywordCss = myDocument.getElementById('hidden-keyword-css');
     if (!hiddenKeywordCss) {
         hiddenKeywordCss = myDocument.createElement('style');
         hiddenKeywordCss.id = 'hidden-keyword-css';

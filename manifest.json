@@ -1,24 +1,24 @@
 {
-  "name": "Hide on bush",
-  "version": "1.0",
-  "description": "Let's hide hating content!",
-  "icons": {
-    "16": "icon.png"
-  },
-  "permissions": ["contextMenus", "webNavigation", "activeTab", "storage"],
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
-  "browser_action": {
-    "default_popup": "popup.html",
-    "default_icon": "icon.png"
-  },
-  "content_scripts": [{
-    "js": [ "daumcafe.js" ],
-    "matches": [ "http://cafe.daum.net/*"],
-    "run_at": "document_idle"
-  }],
-  "content_security_policy": "script-src 'self' https://ajax.googleapis.com https://cdnjs.cloudflare.com; object-src 'self'",
-  "manifest_version": 2
+    "name": "Hide on bush",
+    "version": "1.0",
+    "description": "Let's hide hating content!",
+    "icons": {
+        "16": "icon.png"
+    },
+    "permissions": ["contextMenus", "webNavigation", "activeTab", "storage"],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    },
+    "content_scripts": [{
+        "js": ["daumcafe.js"],
+        "matches": ["http://cafe.daum.net/*"],
+        "run_at": "document_idle"
+    }],
+    "content_security_policy": "script-src 'self' https://ajax.googleapis.com https://cdnjs.cloudflare.com; object-src 'self'",
+    "manifest_version": 2
 }

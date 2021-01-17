@@ -9,7 +9,6 @@
 .popup {
     min-height: 200px;
     box-sizing: border-box;
-
     font-family: 'Jeju Gothic', serif;
     color: #353847;
 }
@@ -18,18 +17,13 @@
 .header {
     height: 30px;
     padding: 10px 10px 10px 20px;
-
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
     font-size: 20px;
     font-weight: bold;
-
     user-select: none;
-
-    border-bottom: 1px solid rgba(0,0,0,.06);
-
+    border-bottom: 1px solid rgba(0, 0, 0, .06);
     background-image: url('img/banner.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,14 +32,12 @@
 .header img {
     height: 32px;
     width: 32px;
-
     user-select: none;
 }
 
 .onoff-box {
     height: 20px;
     color: #fff;
-
     font-size: 10px;
 }
 
@@ -75,7 +67,6 @@
     position: relative;
     vertical-align: top;
     background-color: #5f647b;
-
     box-shadow: 0 0 8px black;
 }
 
@@ -95,11 +86,11 @@ label.active:before {
     transition: all 0.2s;
 }
 
-input[id="onoff-btn"]:checked + label {
+input[id="onoff-btn"]:checked+label {
     background-color: #11a683;
 }
 
-input[id="onoff-btn"]:checked + label:before {
+input[id="onoff-btn"]:checked+label:before {
     -webkit-transform: translateX(28px);
     -ms-transform: translateX(28px);
     transform: translateX(28px);
@@ -135,7 +126,6 @@ input[id="onoff-btn"]:checked + label:before {
 
 .search-bar {
     width: 100%;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -152,10 +142,10 @@ input[id="onoff-btn"]:checked + label:before {
     box-shadow: 0 0 10px #8bcb9a;
     outline: none;
 }
-.search-bar input[type=text]:-ms-clear{
+
+.search-bar input[type=text]:-ms-clear {
     display: none;
 }
-
 
 .search-bar i {
     color: #8bcb9a;
@@ -167,17 +157,17 @@ input[id="onoff-btn"]:checked + label:before {
 }
 
 /* add chips btn */
-.add_chips_back {
+.add-chips-background {
     background: transparent;
 }
 
-.add_form_field {
+.add-chips-field {
     transition: 0.3s;
     position: relative;
     margin: 3px;
 }
 
-.add_form_field i {
+.add-chips-field i {
     transition: all 0.3s ease-in;
     color: white;
     position: absolute;
@@ -186,7 +176,7 @@ input[id="onoff-btn"]:checked + label:before {
     top: 50%;
 }
 
-.add_form_field input {
+.add-chips-field input {
     outline: none;
     transition: all 0.3s ease-in;
     background: #8bcb9a;
@@ -197,17 +187,17 @@ input[id="onoff-btn"]:checked + label:before {
     width: 0;
 }
 
-.add_form_field.active {
+.add-chips-field.active {
     transition: all 0.3s ease-in;
 }
 
-.add_form_field.active i {
+.add-chips-field.active i {
     color: #8bcb9a;
     display: block;
-    transform: translateX(120px) translateY(-50%) rotate(-45deg) ;
+    transform: translateX(120px) translateY(-50%) rotate(-45deg);
 }
 
-.add_form_field.active input {
+.add-chips-field.active input {
     background: white;
     padding: 4.5px 20px 4.5px 10px;
     border-color: #8bcb9a;
@@ -215,19 +205,19 @@ input[id="onoff-btn"]:checked + label:before {
     width: 120px;
 }
 
-.add_form_field i:hover {
+.add-chips-field i:hover {
     cursor: pointer;
 }
 
-.add_form_field input:hover {
+.add-chips-field input:hover {
     cursor: pointer;
 }
 
-.add_form_field.active input:hover {
-    cursor:text;
+.add-chips-field.active input:hover {
+    cursor: text;
 }
 
-.add_form_field:hover {
+.add-chips-field:hover {
     filter: brightness(105%);
 }
 
@@ -266,7 +256,7 @@ span.formHintBubble:after {
     border-style: solid;
     border-width: 6px;
     border-bottom-color: #ffe600;
-    content:" ";
+    content: " ";
     margin-bottom: 21px;
     left: 29px
 }
@@ -304,7 +294,6 @@ span.formHintBubble:after {
     margin-bottom: 2.5px;
 }
 
-
 .chip {
     position: relative;
     margin: 3px;
@@ -321,13 +310,13 @@ span.formHintBubble:after {
 
 .chip::after {
     content: "X";
-    color:white;
+    color: white;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     background-color: #f26269;
@@ -346,9 +335,8 @@ span.formHintBubble:after {
 /* Footer */
 .footer {
     height: 50px;
-
     display: flex;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -356,7 +344,6 @@ span.formHintBubble:after {
 .footer img {
     height: 30px;
     width: 30px;
-
     user-select: none;
 }
 
@@ -364,8 +351,8 @@ span.formHintBubble:after {
     width: 50%;
     height: 100%;
     color: #a4d7af;
-	display: flex;
-	cursor: pointer;
+    display: flex;
+    cursor: pointer;
     background: #fff;
     font-weight: bold;
     justify-content: space-evenly;
@@ -376,13 +363,15 @@ span.formHintBubble:after {
 }
 
 .footer input[type="radio"] {
-	display: none;
+    display: none;
 }
-.footer input[type="radio"]:checked + label {
+
+.footer input[type="radio"]:checked+label {
     font-size: 15px;
     color: #418f53;
-	background: #e8f4eb;
+    background: #e8f4eb;
 }
-.footer input[type="radio"]:not(:checked) + label {
-    box-shadow: 0 1px 4px -1px #8bcb9a inset ;
+
+.footer input[type="radio"]:not(:checked)+label {
+    box-shadow: 0 1px 4px -1px #8bcb9a inset;
 }

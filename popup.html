@@ -1,53 +1,58 @@
 <!DOCTYPE html>
+
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
+
 <body class="popup-wrapper">
-  <div class="popup">
+    <div class="popup">
 
-    <div class="header">
-      <div class="onoff-box">
-        <input type="checkbox" id="onoff-btn" name="onoff-btn">
-        <label for="onoff-btn" class="round" name="onoff-label">
-          <div class="onoff-text-off" id="onoff-text">OFF</div>
-        </label>
-      </div>
-    </div>
-
-    <div class="core">
-      <div class="tab-wrapper" id="tab-keyword-list">
-        <div class="search-wrapper">
-          <div class="search-bar">
-            <input type="text" placeholder="검색" name="keyword-searcher" id="searchBar">
-            <i class="fas fa-times-circle" aria-hidden="true" id="clear-btn"></i>
-          </div>
-        </div>
-
-        <div class="chips-wrapper" id="keyword-chips">
-          <form class="add_chips_back">
-            <div class="add_form_field" id="chip-add-btn">
-              <i class="fas fa-plus add_chips_icon" aria-hidden="true"></i>
-              <input type="text" name="add_chips_text" class="extand_chips">
+        <div class="header">
+            <div class="onoff-box">
+                <input type="checkbox" id="onoff-btn" name="onoff-btn">
+                <label for="onoff-btn" class="round" name="onoff-label">
+                    <div class="onoff-text-off" id="onoff-text">OFF</div>
+                </label>
             </div>
-          </form>
         </div>
-      </div>
+
+        <div class="core">
+            <div class="tab-wrapper" id="tab-keyword-list">
+                <div class="search-wrapper">
+                    <div class="search-bar">
+                        <input type="text" placeholder="검색" name="keyword-searcher" id="searchBar">
+                        <i class="fas fa-times-circle" aria-hidden="true" id="clear-btn"></i>
+                    </div>
+                </div>
+
+                <div class="chips-wrapper" id="keyword-chips">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <input type="radio" name="tabs" id="keyword-tab" value="keyword-tab" checked="checked">
+            <!-- <img src="img/keyword-blind.png"> -->
+            <label for="keyword-tab">Keywords</label>
+
+            <input type="radio" name="tabs" id="user-tab" value="user-tab">
+            <!-- <img src="img/user-blind.png"> -->
+            <label for="user-tab">User Blacklist</label>
+        </div>
     </div>
 
-    <div class="footer">
-      <input type="radio" name="tabs" id="keyword-tab" value="keyword-tab" checked="checked">
-      <!-- <img src="img/keyword-blind.png"> -->
-      <label for="keyword-tab">Keywords</label>
+    <script src="./mvc/model/app-state-model.js"></script>
+    <script src="./mvc/model/keyword-model.js"></script>
+    <script src="./mvc/model/user-model.js"></script>
+    <script src="./mvc/view.js"></script>
+    <script src="./mvc/controller.js"></script>
+    <script src="popup.js"></script>
 
-      <input type="radio" name="tabs" id="user-tab" value="user-tab">
-      <!-- <img src="img/user-blind.png"> -->
-      <label for="user-tab">User Blacklist</label>
-    </div>
-  </div>
-  <script src="popup.js"></script>
 </body>
+
 </html>

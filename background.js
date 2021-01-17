@@ -48,6 +48,7 @@ chrome.webNavigation.onCompleted.addListener(function(e) {
 });
 
 function contextMenusListener(info) {
+    console.log(info);
     const itemId = info.menuItemId;
     const itemText = info.selectionText;
 
@@ -76,6 +77,7 @@ function contextMenusListener(info) {
             });
             break;
         case 'context-menu-add-user':
+            console.log("add user");
             chrome.storage.sync.get(['userList'], function(d) {
                 let userSet = new Set(d.userList);
                 if (userSet.has(itemText)) {

@@ -20,6 +20,7 @@
             }
         },
         setAppState: function(state) {
+            this.appState = state;
             chrome.storage.sync.set({
                 'onoff': state
             });
